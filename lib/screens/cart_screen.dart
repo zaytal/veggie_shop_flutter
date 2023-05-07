@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import '../constants/colors.dart';
 import '../utils/screen_utils.dart';
 import '../widgets/order_card.dart';
@@ -37,10 +38,14 @@ class CartScreen extends StatelessWidget {
                 (index) => Column(
                   children: [
                     index == 0
-                        ? OrderCard(
+                        ? Scrollable(
+                            viewportBuilder: (BuildContext context, ViewportOffset position) => OrderCard(
                             isSelected: true,
                           )
-                        : OrderCard(),
+                        )
+                        : Scrollable(
+                        viewportBuilder: (BuildContext context, ViewportOffset position) => OrderCard()
+                    ),
                     SizedBox(
                       height: getProportionateScreenHeight(8.0),
                     ),

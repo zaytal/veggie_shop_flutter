@@ -1,5 +1,5 @@
-name: s2_ecommerce
-description: Series2 Ecommerce.
+name: fresh_food
+description: App for selling fresh food.
 publish_to: 'none' 
 version: 1.0.0+1
 
