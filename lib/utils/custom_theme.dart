@@ -23,18 +23,27 @@ class CustomTheme {
           headline1: TextStyle(
             fontSize: _getProportionateScreenWidth(60),
             fontWeight: FontWeight.normal,
+            color: kTextColor,
           ),
           headline2: TextStyle(
             fontSize: _getProportionateScreenWidth(36),
             fontWeight: FontWeight.normal,
+            color: kTextColor,
           ),
           headline3: TextStyle(
             fontSize: _getProportionateScreenWidth(24),
             fontWeight: FontWeight.normal,
+            color: kTextColor,
           ),
           headline4: TextStyle().copyWith(
             fontSize: _getProportionateScreenWidth(16),
             fontWeight: FontWeight.normal,
+            color: kTextColor,
+          ),
+          headline5: TextStyle().copyWith(
+            fontSize: _getProportionateScreenWidth(20),
+            fontWeight: FontWeight.w700,
+            color: kTextColor,
           ),
           bodyText1: TextStyle(
             fontSize: _getProportionateScreenWidth(14),
@@ -116,5 +125,23 @@ class CustomTheme {
             ),
           ),
         ),
+      );
+
+  textButtonTheme() => TextButtonThemeData(
+          style: ButtonStyle(
+        foregroundColor: MaterialStateProperty.all(
+          kPrimaryGreen,
+        ),
+        textStyle: MaterialStateProperty.all(
+          TextStyle(
+            fontSize: _getProportionateScreenWidth(17),
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ));
+
+  dividerTheme() => DividerThemeData(
+        color: kGreyShade3,
+        thickness: 2,
       );
 }
